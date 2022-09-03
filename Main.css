@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+}
+
+.container{
+    max-width: 960px;
+    min-height: 600px;
+    background-color: #262829;
+    margin: 0 auto;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
+    rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, 
+    rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.menu {
+    position: relative;
+}
+
+
+.menu .profile {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+}
+.menu .profile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.menu .profile .name{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.menu .profile .email{
+    font-size: 11px;
+    opacity: 50%;
+}
+
+.menu .search-form {
+    padding: 10px;
+}
+.menu .search-form input {
+    background-color: #262829;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(235, 233, 233, 50%);
+}
+
+.menu .category ul {
+    padding: 0;
+}
+
+.menu .category ul li{
+    list-style:none ;
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+
+    
+    
+}
+
+
+.menu .category ul li:hover,
+.menu .category ul li.active {
+    cursor: pointer;
+    background-color: #333538;
+    border-radius: 3px;
+    
+}
+.menu .category ul li.active {
+    border-left: 2px solid #167ad1;
+}
+
+
+.menu .category ul li .listItem-icon {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.menu .add-new-category {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu .add-new-category:hover{
+    cursor: pointer;
+
+}
+.menu .add-new-category span{
+    margin-left: 20px;
+}
+
+
+.main{
+    background-color: #191b1c;
+    padding: 50px;
+    position:relative;
+}
+
+.main .title{
+    display: flex;
+    align-items: center;
+    
+}
+.main .title span{
+    margin-left: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.main .all-task{
+    padding-top: 20px;
+}
+.main .all-task ul{
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    max-height: 500px;
+}
+.main .all-task ul li{
+    padding: 12px 10px;
+    background-color: rgb(49, 50, 50);
+    margin: 2px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .all-task ul li .task-desc .header,
+.main .all-task ul li .task-desc .desc{
+    display: flex;
+    align-items: center;
+}
+.main .all-task ul li .task-desc .desc{
+    margin-left: 30px;
+    margin-top: 5px;
+    opacity: 50%;
+    
+}
+.main .all-task ul li .task-desc .desc span{
+    margin-left: 0px 3px;
+    font-size: 10px;
+
+}
+.main .all-task ul li .task-action svg:hover:nth-child(1){
+    cursor: pointer;
+    fill: #4267b2;
+}
+.main .all-task ul li .task-action svg:hover:nth-child(2){
+    cursor: pointer;
+    fill: #4267b2;
+}
+.main .all-task ul li input{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15 solid currentColor;
+    border-radius: o.15em;
+    transform: translate(-0.075em);
+
+    display: grid;
+    place-content: center;
+}
+.main .all-task ul li input::before{
+    content: " ";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var (rebeccapurple);
+    background-color: CanvasText;
+}
+.main .all-task ul li input:checked::before{
+    transform: scale(1);
+}
+.main .all-task ul li input:focus{
+    outline: max(2px, 0.15) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+}
+.main .all-task ul li span{
+    margin-left: 15px;
+}
+
+.main .add-new-task {
+    display: flex;
+    align-items: center;
+    position:absolute;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.main .add-new-task span{
+    align-items: center;
+     margin-left:20px;
+}
